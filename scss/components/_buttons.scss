@@ -1,0 +1,53 @@
+.btn {
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-family: $heading-font;
+    transition: all 0.25s ease-out;
+
+    &:hover, &:focus {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    &-main {
+        background-image: linear-gradient(to right, $secondary 0%, $primary 51%, $secondary 100%);
+        background-size: 200%;
+        color: $white;
+
+        &:hover, &:focus {
+            animation: gradient 1s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: left center; }
+            25% { background-position: center; }
+            50% { background-position: right; }
+            75% { background-position: center; }
+            100% { background-position: left center; }
+        }
+    }
+
+    &-ghost {
+        background: transparent;
+        border: 3px solid $primary;
+        padding: 0.84rem 1.9rem;
+
+        &:hover, &:focus {
+            background: $primary;
+            color: $primary-light;
+        }
+    }
+
+    &-group {
+        display: flex;
+    }
+}
+
+.social-icon {    
+    padding: 1rem;
+    font-size: 2rem;
+
+    i:before {
+        @include gradient-clip;
+    }
+}

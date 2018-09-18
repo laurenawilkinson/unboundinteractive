@@ -1,0 +1,35 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    font-size: 1rem;
+    font-family: $body-font;
+}
+
+input {
+    border: 0;
+    font-family: inherit;
+}
+
+h1 {
+    @include heading-1;
+}
+
+h2 {
+    @include heading-2;
+}
+
+h3 {
+    @include heading-3;
+}
+
+a {
+    background-color: transparent;
+    color: $primary;
+    text-decoration: none;
+}

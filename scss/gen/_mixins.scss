@@ -1,0 +1,13 @@
+@mixin mobile-content {
+    @media only screen and (max-width: 800px){
+        @content;
+    }
+}
+
+@mixin gradient-clip {
+    background-image: linear-gradient(to right, $secondary, $primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $primary;
+}

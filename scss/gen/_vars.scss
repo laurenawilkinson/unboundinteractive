@@ -1,0 +1,46 @@
+// colours
+$primary: #4EFF58;
+$primary-alt: #29E133;
+$primary-light: #F2FFF3;
+$secondary: #29D4FB;
+$header-background: #120C40;
+$white: #F8F8F8;
+$grey-light: #E9E9E9; 
+
+// fonts
+$heading-font: 'Montserrat', sans-serif;
+$body-font: 'Source Sans Pro', sans-serif;
+
+@font-face {
+    font-family: 'A-DAY-WITHOUT-SUN';
+    src:url('/assets/fonts/A-DAY-WITHOUT-SUN.ttf.woff') format('woff'),
+        url('/assets/fonts/A-DAY-WITHOUT-SUN.ttf.svg#A-DAY-WITHOUT-SUN') format('svg'),
+        url('/assets/fonts/A-DAY-WITHOUT-SUN.ttf.eot'),
+        url('/assets/fonts/A-DAY-WITHOUT-SUN.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+$transhaping-font: 'A-DAY-WITHOUT-SUN', 'Montserrat', serif;
+
+@mixin heading-1 {
+    font-family: $heading-font;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+@mixin heading-2 {
+    font-family: $heading-font;
+    font-size: 2.5rem;
+
+    &::after {
+        content: '_';
+    }
+}
+
+@mixin heading-3 {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,33 @@
+.footer {
+    background: $header-background;
+    color: $white;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    justify-content: center;
+    padding: 3rem 0;
+
+    &__content {
+        grid-column: 2;
+        text-align: center;
+
+        .btn-group {
+            margin-bottom: 3rem;
+        }
+
+        .social-icon {
+            margin-right: 0.5rem;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+
+            a:last-child {
+                color: $white;
+            }
+            
+            i {
+                margin: 0 0.3rem;
+            }
+        }
+    }
+}

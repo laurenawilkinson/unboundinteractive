@@ -1,0 +1,60 @@
+.main-container {
+    background: $grey-light;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    padding-bottom: 1rem;
+
+    &.transhaping-promo {
+        background-image: linear-gradient(to bottom, #201573, #1c1366, #181159, #150f4c, #120c40);
+        color: $white;
+        text-align: center;
+
+        h1 {
+            margin-top: 3rem;
+            font-family: $transhaping-font;
+            font-weight: normal;
+            font-size: 20vh;
+            text-transform: uppercase;
+        }
+        
+        .hero {
+            width: 60%;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+
+        .btn-group {
+            justify-content: center;
+            margin: 2rem 0;
+            align-items: center;
+
+            .btn {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+
+                &-main {
+                    color: $header-background;
+                }
+            }
+        }
+        
+        @include mobile-content {
+            .btn-group {
+                flex-direction: column;
+
+                .btn {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    &__content {
+        grid-column: 2;
+    }
+}

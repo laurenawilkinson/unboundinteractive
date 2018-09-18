@@ -1,0 +1,63 @@
+.nav-container {
+    > span, > input {
+        display: none;
+    }
+}
+
+
+@include mobile-content {    
+    .header {
+        position: relative;
+        z-index: 100;
+    }
+    .nav-container{
+        display: block;
+        position: relative;        
+        z-index: 10;
+        user-select: none;
+
+        input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            right: -5px;
+            cursor: pointer;
+            //opacity: 0; /* hide this */
+            z-index: 2;
+            -webkit-touch-callout: none;
+
+            &:checked {
+                & ~ .header__nav {
+                    opacity: 1;
+                    transform: scaleY(1);
+                    transition: transform 0.5s ease-out;
+                }
+            }
+        }
+
+        .header__nav {
+            flex-direction: column;
+            position: absolute;
+            width: 96vw;
+            transform-origin: 0 0;
+            transform: scaleY(0);
+            left: -20vw;
+            top: 30px;
+            background: $header-background;
+            transition: transform 0.5s ease-out;
+            opacity: 0;
+            padding: 0 2rem 1rem 2rem;
+
+            li {
+                padding: 1rem 0;
+                font-size: 22px;
+
+                a {
+                    color: green;
+                }
+            }
+        }
+    }
+}
