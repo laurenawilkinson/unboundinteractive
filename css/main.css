@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'A-DAY-WITHOUT-SUN';
-  src: url("/assets/fonts/A-DAY-WITHOUT-SUN.ttf.woff") format("woff"), url("/assets/fonts/A-DAY-WITHOUT-SUN.ttf.svg#A-DAY-WITHOUT-SUN") format("svg"), url("/assets/fonts/A-DAY-WITHOUT-SUN.ttf.eot"), url("/assets/fonts/A-DAY-WITHOUT-SUN.ttf.eot?#iefix") format("embedded-opentype");
+  src: url("../../assets/fonts/A-DAY-WITHOUT-SUN.ttf.woff") format("woff"), url("../../assets/fonts/A-DAY-WITHOUT-SUN.ttf.svg#A-DAY-WITHOUT-SUN") format("svg"), url("../../assets/fonts/A-DAY-WITHOUT-SUN.ttf.eot"), url("../../assets/fonts/A-DAY-WITHOUT-SUN.ttf.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
