@@ -9,6 +9,7 @@ html {
     -webkit-text-size-adjust: 100%;
     font-size: 1rem;
     font-family: $body-font;
+    color: $body-color;
 }
 
 input {
@@ -36,9 +37,37 @@ a {
     background-color: transparent;
     color: $primary;
     text-decoration: none;
+
+    &.link-bold {
+        font-weight: bold;
+    }
+}
+
+p {
+    line-height: 1.5;
 }
 
 .main-container {
     display: grid;
     grid-template-columns: 20% auto 20%;
+}
+
+@include tablet-content {
+    .main-container {
+        grid-template-columns: 10% auto 10%;
+    }
+}
+
+@include tiny-screens {
+    .main-container {
+        grid-template-columns: 0 auto 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
 }

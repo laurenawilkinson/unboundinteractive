@@ -10,11 +10,12 @@
         grid-template-columns: 10% auto 10%;
 
         h1 {
-            margin-top: 3rem;
+            margin: 3rem 0 0 0;
             font-family: $transhaping-font;
             font-weight: normal;
             font-size: 20vh;
             text-transform: uppercase;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
         }
         
         .hero {

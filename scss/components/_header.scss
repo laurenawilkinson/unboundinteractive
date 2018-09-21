@@ -39,55 +39,54 @@
         justify-content: flex-end;
 
         li {
+            position: relative;
+
             a {
                 text-transform: uppercase;
                 font-weight: 700;
                 color: $white;
-                position: relative;
                 margin: 0 2rem;
+            }
 
+            &::before {
+                content: '';
+                position: absolute;
+            }
+
+            &:hover {
                 &::before {
-                    content: '';
-                    position: absolute;
-                    left: -1.7rem;
-                }
+                    animation: bounce 0.8s ease-out infinite;
 
-                &:hover {
-                    &::before {
-                        animation: bounce 0.8s ease-out infinite;
-
-                        @keyframes bounce {
-                            0% { transform: translateY(0); }
-                            50% { transform: translateY(-5px); }
-                            100% { transform: translateY(0); }
-                        }
+                    @keyframes bounce {
+                        0% { transform: translateY(0); }
+                        50% { transform: translateY(-5px); }
+                        100% { transform: translateY(0); }
                     }
                 }
             }
-            &:nth-child(1) a::before {
+            &:nth-child(1)::before {
                 border-left: 9px solid transparent;
                 border-right: 9px solid transparent;
                 border-bottom: 15px solid #42fc6e;
             }
-            &:nth-child(2) a::before {
+            &:nth-child(2)::before {
                 width: 15px;
                 height: 15px;
                 background: #15DEE8;
-                left: -1.5rem;
             }
-            &:nth-child(3) a::before {
+            &:nth-child(3)::before {
                 width: 17px;
                 height: 17px;
                 background: #9E43FF;
                 border-radius: 50%;
             }
-            &:nth-child(4) a::before {
+            &:nth-child(4)::before {
                 width: 15px;
                 height: 15px;
                 background: #FFA033;
                 transform: rotate(45deg);
             }
-            &:nth-child(4) a:hover::before {
+            &:nth-child(4):hover::before {
                 animation: specialBounce 0.8s ease-out infinite;
                 @keyframes specialBounce {
                     0% { transform: translateY(0) rotate(45deg); }

@@ -4,9 +4,10 @@
     font-weight: bold;
     font-family: $heading-font;
     transition: all 0.25s ease-out;
+    text-align: center;
 
     &:hover, &:focus {
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     }
 
     &-main {

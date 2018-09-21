@@ -17,6 +17,7 @@ html {
   -webkit-text-size-adjust: 100%;
   font-size: 1rem;
   font-family: "Source Sans Pro", sans-serif;
+  color: #2B2B2B;
 }
 
 input {
@@ -35,7 +36,7 @@ h1 {
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: normal;
   font-style: italic;
   margin-bottom: 2rem;
@@ -58,11 +59,39 @@ a {
   text-decoration: none;
 }
 
+a.link-bold {
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.5;
+}
+
 .main-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% auto 20%;
       grid-template-columns: 20% auto 20%;
+}
+
+@media only screen and (max-width: 1150px) {
+  .main-container {
+    -ms-grid-columns: 10% auto 10%;
+        grid-template-columns: 10% auto 10%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main-container {
+    -ms-grid-columns: 0 auto 0;
+        grid-template-columns: 0 auto 0;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 .btn {
@@ -72,11 +101,12 @@ a {
   font-family: "Montserrat", sans-serif;
   -webkit-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
+  text-align: center;
 }
 
 .btn:hover, .btn:focus {
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-main {
@@ -218,21 +248,23 @@ a {
           justify-content: flex-end;
 }
 
+.header__nav li {
+  position: relative;
+}
+
 .header__nav li a {
   text-transform: uppercase;
   font-weight: 700;
   color: #F8F8F8;
-  position: relative;
   margin: 0 2rem;
 }
 
-.header__nav li a::before {
+.header__nav li::before {
   content: '';
   position: absolute;
-  left: -1.7rem;
 }
 
-.header__nav li a:hover::before {
+.header__nav li:hover::before {
   -webkit-animation: bounce 0.8s ease-out infinite;
           animation: bounce 0.8s ease-out infinite;
 }
@@ -267,27 +299,26 @@ a {
   }
 }
 
-.header__nav li:nth-child(1) a::before {
+.header__nav li:nth-child(1)::before {
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-bottom: 15px solid #42fc6e;
 }
 
-.header__nav li:nth-child(2) a::before {
+.header__nav li:nth-child(2)::before {
   width: 15px;
   height: 15px;
   background: #15DEE8;
-  left: -1.5rem;
 }
 
-.header__nav li:nth-child(3) a::before {
+.header__nav li:nth-child(3)::before {
   width: 17px;
   height: 17px;
   background: #9E43FF;
   border-radius: 50%;
 }
 
-.header__nav li:nth-child(4) a::before {
+.header__nav li:nth-child(4)::before {
   width: 15px;
   height: 15px;
   background: #FFA033;
@@ -295,7 +326,7 @@ a {
           transform: rotate(45deg);
 }
 
-.header__nav li:nth-child(4) a:hover::before {
+.header__nav li:nth-child(4):hover::before {
   -webkit-animation: specialBounce 0.8s ease-out infinite;
           animation: specialBounce 0.8s ease-out infinite;
 }
@@ -403,12 +434,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem;
   width: 100%;
 }
 
 .games-card__image {
-  width: 45%;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding: 1rem;
 }
 
 .games-card__image img {
@@ -416,9 +448,9 @@ a {
 }
 
 .games-card__content {
-  width: 55%;
-  min-width: 345px;
-  padding-left: 1rem;
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  padding: 1rem;
 }
 
 .games-card__content h3 {
@@ -434,6 +466,31 @@ a {
 
 .games-card__content .btn-group .btn {
   margin-left: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .games-card .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .games-card .btn-group > * {
+    width: 100%;
+  }
+  .games-card .btn-group span {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  .games-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .footer {
@@ -491,11 +548,12 @@ a {
 }
 
 .main-container.transhaping-promo h1 {
-  margin-top: 3rem;
+  margin: 3rem 0 0 0;
   font-family: "A-DAY-WITHOUT-SUN", "Montserrat", serif;
   font-weight: normal;
   font-size: 20vh;
   text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .main-container.transhaping-promo .hero {
@@ -549,7 +607,29 @@ a {
   grid-column: 2;
 }
 
+.games h1 > .shapes-heading {
+  position: relative;
+}
+
+.games h1 > .shapes-heading::before, .games h1 > .shapes-heading::after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: #15DEE8;
+  top: 1.5rem;
+}
+
+.games h1 > .shapes-heading::before {
+  left: -3.5rem;
+}
+
+.games h1 > .shapes-heading::after {
+  right: -3.5rem;
+}
+
 .games__soon {
   text-align: center;
   margin: 2rem 0;
+  color: grey;
 }
