@@ -1,0 +1,33 @@
+.games-card {
+    background: white;
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+
+    &__image {
+        width: 45%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        width: 55%;
+        min-width: 345px;
+        padding-left: 1rem;
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        .btn-group {
+            margin-top: 1rem;
+            align-self: center;
+
+            .btn {
+                margin-left: 0;
+            }
+        }
+    }
+}

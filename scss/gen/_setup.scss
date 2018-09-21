@@ -18,10 +18,14 @@ input {
 
 h1 {
     @include heading-1;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem 0;
 }
 
 h2 {
     @include heading-2;
+    margin-bottom: 2rem;
 }
 
 h3 {
@@ -32,4 +36,9 @@ a {
     background-color: transparent;
     color: $primary;
     text-decoration: none;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
 }
