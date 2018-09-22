@@ -1,13 +1,14 @@
 .main-container {
     background: $grey-light;
     min-height: 80vh;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
 
     &.transhaping-promo {
         background-image: linear-gradient(to bottom, #201573, #1c1366, #181159, #150f4c, #120c40);
         color: $white;
         text-align: center;
         grid-template-columns: 10% auto 10%;
+        padding-bottom: 1rem;
 
         h1 {
             margin: 3rem 0 0 0;
@@ -61,5 +62,13 @@
 
     &__content {
         grid-column: 2;
+    }
+}
+
+@include mobile-content {
+    .main-container.transhaping-promo {
+        h1 {
+            font-size: 10vh;
+        }
     }
 }

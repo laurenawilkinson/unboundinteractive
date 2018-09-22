@@ -12,9 +12,10 @@ html {
     color: $body-color;
 }
 
-input {
+input, textarea {
     border: 0;
     font-family: inherit;
+    outline: 0;
 }
 
 h1 {
@@ -22,6 +23,16 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     margin: 2rem 0;
+
+    > .shapes-heading {
+        position: relative;
+    
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 1.5rem;
+        }
+    }
 }
 
 h2 {
@@ -45,6 +56,10 @@ a {
 
 p {
     line-height: 1.5;
+
+    + p {
+        margin-top: 1rem;
+    }
 }
 
 .main-container {
@@ -52,7 +67,14 @@ p {
     grid-template-columns: 20% auto 20%;
 }
 
-@include tablet-content {
+.content-box {
+    padding: 1rem;
+    background: white;
+    margin-bottom: 2rem;
+    @include box-shadow;
+}
+
+@include laptop-content {
     .main-container {
         grid-template-columns: 10% auto 10%;
     }

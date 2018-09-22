@@ -1,0 +1,10 @@
+.team {
+    @include shapes-heading {
+        &::before, &::after {
+            width: 2rem;
+            height: 2rem;
+            background: #9E43FF;
+            border-radius: 50%;
+        }
+    }
+}

@@ -16,10 +16,30 @@
     }
 }
 
+@mixin laptop-content {
+    @media only screen and (max-width: 1470px){
+        @content;
+    }
+}
+
 @mixin gradient-clip {
     background-image: linear-gradient(to right, $secondary, $primary);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $primary;
+}
+
+@mixin shapes-heading {
+    h1 > .shapes-heading {
+        @content;
+
+        &::before {
+            left: -3.5rem;
+        }
+
+        &::after {
+            right: -3.5rem;
+        }
+    }
 }

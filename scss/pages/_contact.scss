@@ -1,0 +1,71 @@
+.contact {
+    @include shapes-heading {
+        &::before, &::after {
+            background: #FFA033;
+            transform: rotate(45deg);
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    h1 {
+        margin-bottom: 4rem;
+    }
+    .main-container__content {
+        display: flex;
+        flex-direction: column;
+
+        .contact__info {
+            background: green;
+            width: 40%;
+            position: absolute;
+            top: 5rem;
+            left: -10rem;
+            padding: 2rem;
+            color: $primary-light;
+            @include box-shadow;
+        }
+
+        .contact__form {
+            background: white;
+            min-width: 500px;
+            width: 70%;
+            align-self: center;
+            padding-left: 35%;
+            padding-top: 3rem;
+            position: relative;
+            @include box-shadow;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                margin-right: 1rem;
+                padding: 0 1rem 3rem 0;
+    
+                label {
+                    input, textarea {
+                        background: #F3F3F3;
+                        width: 100%;
+                        margin-bottom: 1rem;
+                        padding: 0.5rem 1rem;
+                    }
+    
+                    textarea {
+                        resize: none;
+                        padding: 0.5rem 1rem 4rem 1rem;
+                    }
+                }
+
+                button {
+                    border: 0;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    padding: 1rem;
+                    width: 40%;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    
+}
