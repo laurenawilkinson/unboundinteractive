@@ -974,6 +974,14 @@ p + p {
           flex-direction: column;
 }
 
+.success .content-box {
+  text-align: center;
+}
+
+.success .content-box p {
+  margin-bottom: 2rem;
+}
+
 @media only screen and (max-width: 855px) {
   .contact__form {
     padding: 1rem;

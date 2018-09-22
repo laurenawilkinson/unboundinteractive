@@ -97,6 +97,16 @@
     }
 }
 
+.success {
+    .content-box {
+        text-align: center;
+
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
 @include mobile-content {
     .contact {
         &__form {
