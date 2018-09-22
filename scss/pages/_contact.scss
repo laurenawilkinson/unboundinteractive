@@ -1,7 +1,9 @@
 .contact {
+    padding-bottom: 4rem;
+
     @include shapes-heading {
         &::before, &::after {
-            background: #FFA033;
+            background: $shape-orange;
             transform: rotate(45deg);
             width: 2rem;
             height: 2rem;
@@ -11,61 +13,119 @@
     h1 {
         margin-bottom: 4rem;
     }
-    .main-container__content {
-        display: flex;
-        flex-direction: column;
 
-        .contact__info {
-            background: green;
-            width: 40%;
-            position: absolute;
-            top: 5rem;
-            left: -10rem;
-            padding: 2rem;
-            color: $primary-light;
-            @include box-shadow;
+    &__info {
+        background: #23B42B;
+        width: 60%;
+        position: absolute;
+        top: 2.5rem;
+        left: -7rem;
+        padding: 2rem;
+        color: $primary-light;
+        @include box-shadow;
+        font-family: $heading-font;
+
+        > p {
+            margin-bottom: 1rem;
         }
+        
+        &-links {
+            padding-top: 1rem;
+            display: grid;
+            grid-template-columns: 5% auto;
+            grid-template-rows: auto auto auto auto;
+            grid-gap: 2rem 1rem;
+            align-items: center;
+            word-break: break-all;
 
-        .contact__form {
-            background: white;
-            min-width: 500px;
-            width: 70%;
-            align-self: center;
-            padding-left: 35%;
-            padding-top: 3rem;
-            position: relative;
-            @include box-shadow;
+            &-icon {
+                grid-column: 1;
+            }
 
-            form {
-                display: flex;
-                flex-direction: column;
-                margin-right: 1rem;
-                padding: 0 1rem 3rem 0;
-    
-                label {
-                    input, textarea {
-                        background: #F3F3F3;
-                        width: 100%;
-                        margin-bottom: 1rem;
-                        padding: 0.5rem 1rem;
-                    }
-    
-                    textarea {
-                        resize: none;
-                        padding: 0.5rem 1rem 4rem 1rem;
-                    }
-                }
-
-                button {
-                    border: 0;
-                    cursor: pointer;
-                    text-transform: uppercase;
-                    padding: 1rem;
-                    width: 40%;
-                    align-self: center;
-                }
+            &-link {
+                grid-column: 2;
+                color: $primary-light;
+                font-weight: bold;
             }
         }
     }
-    
+
+    &__form {
+        background: white;
+        min-width: 500px;
+        width: 70%;
+        align-self: center;
+        padding-left: 35%;
+        padding-top: 3rem;
+        position: relative;
+        @include box-shadow;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-right: 1rem;
+            padding: 0 1rem 3rem 0;
+
+            label {
+                input, textarea {
+                    background: #F3F3F3;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    padding: 0.5rem 1rem;
+                }
+
+                textarea {
+                    resize: none;
+                    padding: 0.5rem 1rem 4rem 1rem;
+                }
+            }
+
+            button {
+                border: 0;
+                cursor: pointer;
+                text-transform: uppercase;
+                padding: 1rem;
+                width: 40%;
+                align-self: center;
+            }
+        }
+    }
+
+    .main-container__content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@include mobile-content {
+    .contact {
+        &__form {
+            padding: 1rem;
+            min-width: 0;
+            width: 95%;
+
+            h2 {
+                margin-top: 1rem;
+                text-align: center;
+            }
+
+            form {
+                margin-right: 0;
+                padding: 0;
+            }
+        }
+
+        &__info {
+            position: initial;
+            width: 100%;
+            background: white;
+            box-shadow: none;
+            padding: 2rem 0;
+            color: $body-color;
+
+            &-links-link {
+                color: $primary;
+            }
+        }
+    }
 }

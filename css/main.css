@@ -90,7 +90,7 @@ p + p {
 }
 
 .content-box {
-  padding: 1rem;
+  padding: 2rem;
   background: white;
   margin-bottom: 2rem;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -109,11 +109,26 @@ p + p {
     -ms-grid-columns: 0 auto 0;
         grid-template-columns: 0 auto 0;
   }
+  .main-container__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   h1 {
     font-size: 3rem;
   }
   h2 {
     font-size: 2rem;
+  }
+  .content-box {
+    width: 95%;
   }
 }
 
@@ -497,9 +512,9 @@ p + p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card-container .card {
@@ -511,7 +526,8 @@ p + p {
       -ms-flex-direction: column;
           flex-direction: column;
   background: white;
-  padding: 1rem;
+  padding: 2rem;
+  width: 32%;
   min-width: 330px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -568,6 +584,10 @@ p + p {
   padding: 1rem 0;
 }
 
+.card-container .card__body > p {
+  min-height: 120px;
+}
+
 .card-container .card__facts {
   padding-top: 1rem;
 }
@@ -583,6 +603,7 @@ p + p {
 
 .card-container .card__facts ol {
   margin-left: 1rem;
+  min-height: 180px;
 }
 
 .card-container .card__facts ol li {
@@ -594,6 +615,45 @@ p + p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.card-container .card__footer .btn-group .social-icon {
+  color: #9E43FF;
+  padding: 0 1rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  .card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card-container .card {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+  .card-container .card:not(:last-of-type) {
+    margin-right: 0;
+  }
+  .card-container .card__body > p {
+    min-height: 0;
+  }
+  .card-container .card__facts ol {
+    min-height: 0;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  .games-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -610,29 +670,9 @@ p + p {
     text-align: center;
     margin-top: 1rem;
   }
-}
-
-@media only screen and (max-width: 855px) {
-  .games-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 1150px) {
-  .card-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .card-container .card {
-    margin-bottom: 1rem;
-  }
-  .card-container .card:not(:last-of-type) {
-    margin-right: 0;
+    width: 95%;
+    min-width: auto;
   }
 }
 
@@ -779,15 +819,15 @@ p + p {
 }
 
 @media only screen and (max-width: 500px) {
-  .games h1 > .shapes-heading::before, .games h1 > .shapes-heading::after {
+  .games h1 > .shapes-heading::before, .games h1 > .shapes-heading::after, .team h1 > .shapes-heading::before, .team h1 > .shapes-heading::after, .contact h1 > .shapes-heading::before, .contact h1 > .shapes-heading::after {
     top: 1rem;
     width: 1.5rem;
     height: 1.5rem;
   }
-  .games h1 > .shapes-heading::before {
+  .games h1 > .shapes-heading::before, .team h1 > .shapes-heading::before, .contact h1 > .shapes-heading::before {
     left: -2.5rem;
   }
-  .games h1 > .shapes-heading::after {
+  .games h1 > .shapes-heading::after, .team h1 > .shapes-heading::after, .contact h1 > .shapes-heading::after {
     right: -2.5rem;
   }
 }
@@ -805,6 +845,10 @@ p + p {
 
 .team h1 > .shapes-heading::after {
   right: -3.5rem;
+}
+
+.contact {
+  padding-bottom: 4rem;
 }
 
 .contact h1 > .shapes-heading::before, .contact h1 > .shapes-heading::after {
@@ -827,29 +871,51 @@ p + p {
   margin-bottom: 4rem;
 }
 
-.contact .main-container__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contact .main-container__content .contact__info {
-  background: green;
-  width: 40%;
+.contact__info {
+  background: #23B42B;
+  width: 60%;
   position: absolute;
-  top: 5rem;
-  left: -10rem;
+  top: 2.5rem;
+  left: -7rem;
   padding: 2rem;
   color: #F2FFF3;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Montserrat", sans-serif;
 }
 
-.contact .main-container__content .contact__form {
+.contact__info > p {
+  margin-bottom: 1rem;
+}
+
+.contact__info-links {
+  padding-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% auto;
+      grid-template-columns: 5% auto;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+  grid-gap: 2rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  word-break: break-all;
+}
+
+.contact__info-links-icon {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.contact__info-links-link {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  color: #F2FFF3;
+  font-weight: bold;
+}
+
+.contact__form {
   background: white;
   min-width: 500px;
   width: 70%;
@@ -863,7 +929,7 @@ p + p {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.contact .main-container__content .contact__form form {
+.contact__form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,19 +941,19 @@ p + p {
   padding: 0 1rem 3rem 0;
 }
 
-.contact .main-container__content .contact__form form label input, .contact .main-container__content .contact__form form label textarea {
+.contact__form form label input, .contact__form form label textarea {
   background: #F3F3F3;
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
 }
 
-.contact .main-container__content .contact__form form label textarea {
+.contact__form form label textarea {
   resize: none;
   padding: 0.5rem 1rem 4rem 1rem;
 }
 
-.contact .main-container__content .contact__form form button {
+.contact__form form button {
   border: 0;
   cursor: pointer;
   text-transform: uppercase;
@@ -896,4 +962,42 @@ p + p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.contact .main-container__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 855px) {
+  .contact__form {
+    padding: 1rem;
+    min-width: 0;
+    width: 95%;
+  }
+  .contact__form h2 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .contact__form form {
+    margin-right: 0;
+    padding: 0;
+  }
+  .contact__info {
+    position: initial;
+    width: 100%;
+    background: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 2rem 0;
+    color: #2B2B2B;
+  }
+  .contact__info-links-link {
+    color: #4EFF58;
+  }
 }

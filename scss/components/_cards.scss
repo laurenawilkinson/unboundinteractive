@@ -35,13 +35,14 @@
 .card-container {
     display: flex;
     //flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 
     .card {
         display: flex;
         flex-direction: column;
         background: white;
-        padding: 1rem;
+        padding: 2rem;
+        width: 32%;
         min-width: 330px;
         @include box-shadow;
 
@@ -86,6 +87,10 @@
 
         &__body {
             padding: 1rem 0;
+
+            > p {
+                min-height: 120px;
+            }
         }
 
         &__facts {
@@ -94,13 +99,14 @@
                 text-align: center;
                 padding: 1rem 0;
                 margin-bottom: 1rem;
-                background: #9E43FF;
+                background: $shape-purple;
                 color: white;
                 text-transform: uppercase;
             }
 
             ol {
                 margin-left: 1rem;
+                min-height: 180px;
                 li {
                     line-height: 1.5;
                     margin-bottom: 1rem;
@@ -111,8 +117,45 @@
         &__footer {
             .btn-group{ 
                 justify-content: center;
+
+                .social-icon {
+                    color: $shape-purple;
+                    padding: 0 1rem;
+                }
             }
         }
+    }
+}
+
+@include tablet-content {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+
+        .card {
+            width: 70%;
+            &:not(:last-of-type){
+                margin-right: 0;
+            }
+            margin-bottom: 1rem;
+
+            &__body {
+                > p {
+                    min-height: 0;
+                }
+            }
+            &__facts {
+                ol {
+                    min-height: 0;
+                }
+            }
+        }
+    }
+}
+
+@include mobile-content {
+    .games-card {
+        flex-direction: column;
     }
 }
 
@@ -130,24 +173,12 @@
                 margin-top: 1rem;
             }
         }
-    }    
-}
-
-@include mobile-content {
-    .games-card {
-        flex-direction: column;
     }
-}
-
-@include tablet-content {
+    
     .card-container {
-        flex-direction: column;
-
         .card {
-            &:not(:last-of-type){
-                margin-right: 0;
-            }
-            margin-bottom: 1rem;
+            width: 95%;
+            min-width: auto;
         }
     }
 }

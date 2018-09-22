@@ -16,7 +16,7 @@
 }
 
 @include tiny-screens {
-    .games {
+    .games, .team, .contact {
         h1 > .shapes-heading {
             &::before, &::after {
                 top: 1rem;
