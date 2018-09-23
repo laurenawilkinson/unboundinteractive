@@ -4,7 +4,8 @@
     grid-template-columns: 10% 15% auto 10%;
     align-items: center;
     width: 100%;
-    height: 60px;
+    //height: 60px;
+    padding: 0.5rem;
     font-family: $heading-font;
     position: relative;
 	box-shadow: 0 3px 20px rgba(0,0,0,0.3);
@@ -51,6 +52,7 @@
             &::before {
                 content: '';
                 position: absolute;
+                left: 0.2rem;
             }
 
             &:hover {
@@ -64,36 +66,60 @@
                     }
                 }
             }
+
             &:nth-child(1)::before {
                 border-left: 9px solid transparent;
                 border-right: 9px solid transparent;
                 border-bottom: 15px solid #42fc6e;
             }
+
             &:nth-child(2)::before {
                 width: 15px;
                 height: 15px;
                 background: #15DEE8;
             }
+
             &:nth-child(3)::before {
                 width: 17px;
                 height: 17px;
                 background: $shape-purple;
                 border-radius: 50%;
             }
-            &:nth-child(4)::before {
-                width: 15px;
-                height: 15px;
-                background: #FFA033;
-                transform: rotate(45deg);
-            }
-            &:nth-child(4):hover::before {
-                animation: specialBounce 0.8s ease-out infinite;
-                @keyframes specialBounce {
-                    0% { transform: translateY(0) rotate(45deg); }
-                    50% { transform: translateY(-5px) rotate(45deg); }
-                    100% { transform: translateY(0) rotate(45deg); }
+
+            &:nth-child(4) {
+                > a {
+                    margin-right: 1rem;
+                }
+
+                &::before {
+                    width: 15px;
+                    height: 15px;
+                    background: #FFA033;
+                    transform: rotate(45deg);
+                }
+
+                &:hover::before {
+                    animation: specialBounce 0.8s ease-out infinite;
+                    @keyframes specialBounce {
+                        0% { transform: translateY(0) rotate(45deg); }
+                        50% { transform: translateY(-5px) rotate(45deg); }
+                        100% { transform: translateY(0) rotate(45deg); }
+                    }
                 }
             }
+        }
+    }
+}
+
+@include tablet-content {
+    .header {
+        &__logo {
+            grid-column: 1 / 2;
+            margin-left: 1rem;
+        }
+
+        &__nav {
+            grid-column: 3 / 5;
         }
     }
 }

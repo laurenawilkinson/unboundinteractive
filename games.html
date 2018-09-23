@@ -12,20 +12,20 @@
 <body>
     <header class="header">
         <a class="header__logo" href="/">
-            <img src="assets/logo.png">
+            <img src="/assets/logo.png">
             <div class="header__logo-text">
                 <span>Unbound</span><span>Interactive</span>
             </div>
         </a>
-        <div class="nav-container">
-            <input type="checkbox">
-            <ul class="header__nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/games">Games</a></li>
-                <li><a href="/team">Team</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
+        <span id="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <ul class="header__nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
     </header>
     <div class="main-container games">
         <div class="main-container__content">
@@ -33,7 +33,7 @@
             <h2>In Development</h2>
             <div class="games-card">
                 <div class="games-card__image">
-                    <img src="https://picsum.photos/500/300">
+                    <img src="/assets/image2.png">
                 </div>
                 <div class="games-card__content">
                     <h3>Transhaping</h3>
@@ -57,5 +57,6 @@
             <p class="copyright">Made with <a href="https://laurenwilkinson.co.uk" title="Lauren Wilkinson" target="_blank"><i class="fas fa-heart"></i></a> by <a href="https://laurenwilkinson.co.uk" target="_blank">Lauren</a></p>
         </div>
     </footer>
+    <script src="/main.js"></script>
 </body>
 </html>

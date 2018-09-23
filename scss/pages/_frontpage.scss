@@ -68,7 +68,9 @@
 @include mobile-content {
     .main-container.transhaping-promo {
         h1 {
-            font-size: 10vh;
+            font-size: 6rem;
         }
+
+        min-height: 0;
     }
 }

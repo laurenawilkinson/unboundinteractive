@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Unbound Interactive</title>
+    <title>Unbound Interactive | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700|Nanum+Gothic+Coding" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -12,27 +12,25 @@
 <body>
     <header class="header">
         <a class="header__logo" href="/">
-            <img src="assets/logo.png">
+            <img src="/assets/logo.png">
             <div class="header__logo-text">
                 <span>Unbound</span><span>Interactive</span>
             </div>
         </a>
-        <div class="nav-container">
-            <input type="checkbox">
-            <ul class="header__nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/games">Games</a></li>
-                <li><a href="/team">Team</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
+        <span id="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <ul class="header__nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
     </header>
     <div class="main-container contact">
         <div class="main-container__content">
             <h1><span class="shapes-heading">Contact</span></h1>
-            
             <div class="contact__form">
-                
                 <h2>Get in Touch</h2>
                 <form name="contact" method="POST" action="/success" netlify>
                     <label for="name">
@@ -60,7 +58,6 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
     <footer class="footer">
@@ -73,5 +70,6 @@
             <p class="copyright">Made with <a href="https://laurenwilkinson.co.uk" title="Lauren Wilkinson" target="_blank"><i class="fas fa-heart"></i></a> by <a href="https://laurenwilkinson.co.uk" target="_blank">Lauren</a></p>
         </div>
     </footer>
+    <script src="/main.js"></script>
 </body>
 </html>
