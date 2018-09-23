@@ -851,6 +851,14 @@ p + p {
           align-items: center;
 }
 
+.games-transhaping .main-container__content > .btn {
+  margin-bottom: 20vh;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #120C40;
+  padding: 1rem 2rem;
+}
+
 .games-transhaping h1 {
   margin-bottom: 4rem;
 }
@@ -861,8 +869,8 @@ p + p {
 
 .games-transhaping .trailer {
   cursor: pointer;
-  margin-bottom: 20vh;
   width: 90%;
+  margin-bottom: 4rem;
 }
 
 .games-transhaping .section {
@@ -877,6 +885,10 @@ p + p {
   padding: 3rem 0;
   font-size: 1.1rem;
   height: auto;
+}
+
+.games-transhaping .section--small a {
+  font-weight: bold;
 }
 
 .games-transhaping .section__content {
@@ -903,6 +915,30 @@ p + p {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+
+@media only screen and (max-width: 855px) {
+  .games-transhaping {
+    -ms-grid-columns: 0 auto 0;
+        grid-template-columns: 0 auto 0;
+  }
+  .games-transhaping h1 {
+    font-size: 2rem;
+  }
+  .games-transhaping .section, .games-transhaping .section--small {
+    padding: 1rem;
+  }
+  .games-transhaping .section__content, .games-transhaping .section:nth-of-type(even) .section__content {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+  }
+  .games-transhaping .section__content img, .games-transhaping .section:nth-of-type(even) .section__content img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .team h1 > .shapes-heading::before, .team h1 > .shapes-heading::after {

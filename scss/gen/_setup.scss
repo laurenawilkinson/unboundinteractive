@@ -80,6 +80,7 @@ p {
     }
 }
 
+
 @include tiny-screens {
     .main-container {
         grid-template-columns: 0 auto 0;
