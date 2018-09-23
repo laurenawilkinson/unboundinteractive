@@ -17,19 +17,19 @@
     }
     
     h1 {
-        margin-bottom: 4rem;
-    }
-
-    h2 {
-        &::after {
-            content: '';
-        }
+        margin: 3rem 0 1rem 0;
+        font-family: $transhaping-font;
+        font-weight: normal;
+        font-size: 8rem;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
     }
 
     .trailer {
         cursor: pointer;
         width: 90%;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 8px 20px 1px rgba(0,0,0,0.3);
     }
 
     .section {
@@ -55,8 +55,13 @@
             grid-gap: 3rem;
             align-items: center;
 
+            h2 {
+                text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+            }
+
             img {
                 width: 100%;
+                box-shadow: 0 4px 10px 1px rgba(0,0,0,0.3);
             }
         }
         
@@ -75,10 +80,6 @@
 @include mobile-content {
     .games-transhaping {
         grid-template-columns: 0 auto 0;
-
-        h1 {
-            font-size: 2rem;
-        }
 
         .section, .section--small {
             padding: 1rem;

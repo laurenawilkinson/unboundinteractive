@@ -39,10 +39,6 @@ $transhaping-font: 'A-DAY-WITHOUT-SUN', 'Montserrat', serif;
     font-size: 2.3rem;
     font-weight: normal;
     font-style: italic;
-
-    &::after {
-        content: '_';
-    }
 }
 
 @mixin heading-3 {
