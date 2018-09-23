@@ -431,6 +431,8 @@ p + p {
     grid-column: 4;
     cursor: pointer;
     display: block;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .header__nav {
     -webkit-box-orient: vertical;
@@ -442,8 +444,8 @@ p + p {
     grid-column: 1 / 4;
     overflow-y: hidden;
     max-height: 0;
-    -webkit-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
   .header__nav.active {
     max-height: 40vh;
@@ -451,9 +453,6 @@ p + p {
   }
   .header__nav li {
     margin: 1rem 0 1rem 1rem;
-  }
-  .header__nav li:first-child {
-    margin-top: 0;
   }
 }
 

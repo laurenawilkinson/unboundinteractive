@@ -12,6 +12,7 @@
             grid-column: 4;
             cursor: pointer;
             display: block;
+            justify-self: center;
         }
 
         &__nav {
@@ -19,7 +20,7 @@
             grid-column: 1 / 4;
             overflow-y: hidden;
             max-height: 0;
-            transition: all 0.6s ease-out;
+            transition: all 0.2s ease-out;
 
             &.active {
                 max-height: 40vh;  
@@ -28,10 +29,6 @@
 
             li {
                 margin: 1rem 0 1rem 1rem;
-            }
-
-            li:first-child {
-                margin-top: 0;
             }
         }
     }
