@@ -871,8 +871,6 @@ p + p {
   cursor: pointer;
   width: 90%;
   margin-bottom: 3rem;
-  -webkit-box-shadow: 0 8px 20px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 8px 20px 1px rgba(0, 0, 0, 0.3);
 }
 
 .games-transhaping .section {
