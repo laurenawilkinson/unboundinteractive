@@ -444,11 +444,11 @@ p + p {
     grid-column: 1 / 4;
     overflow-y: hidden;
     max-height: 0;
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.3s cubic-bezier(0.28, 0.47, 0.67, 1);
+    transition: all 0.3s cubic-bezier(0.28, 0.47, 0.67, 1);
   }
   .header__nav.active {
-    max-height: 40vh;
+    max-height: 60vh;
     padding: 1rem 0;
   }
   .header__nav li {
@@ -533,8 +533,8 @@ p + p {
 }
 
 .card-container .card__header-inner {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, white), to(rgba(255, 123, 188, 0)));
-  background: linear-gradient(0deg, white 1%, rgba(255, 123, 188, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, white), to(rgba(255, 255, 255, 0.1)));
+  background: linear-gradient(0deg, white 1%, rgba(255, 255, 255, 0.1) 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -789,7 +789,7 @@ p + p {
 
 @media only screen and (max-width: 855px) {
   .main-container.transhaping-promo {
-    min-height: 0;
+    min-height: 70vh;
   }
   .main-container.transhaping-promo h1 {
     font-size: 6rem;
@@ -819,15 +819,14 @@ p + p {
 
 @media only screen and (max-width: 500px) {
   .games h1 > .shapes-heading::before, .games h1 > .shapes-heading::after, .team h1 > .shapes-heading::before, .team h1 > .shapes-heading::after, .contact h1 > .shapes-heading::before, .contact h1 > .shapes-heading::after {
-    top: 1rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    background: transparent;
+    display: none;
   }
   .games h1 > .shapes-heading::before, .team h1 > .shapes-heading::before, .contact h1 > .shapes-heading::before {
-    left: -2.5rem;
+    left: -3.5rem;
   }
   .games h1 > .shapes-heading::after, .team h1 > .shapes-heading::after, .contact h1 > .shapes-heading::after {
-    right: -2.5rem;
+    right: -3.5rem;
   }
 }
 
@@ -859,16 +858,23 @@ p + p {
 }
 
 .games-transhaping h1 {
-  margin: 3rem 0 1rem 0;
+  margin: 3rem 0 0 0;
   font-family: "A-DAY-WITHOUT-SUN", "Montserrat", serif;
   font-weight: normal;
-  font-size: 8rem;
+  font-size: 20vh;
   text-transform: uppercase;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
+.games-transhaping h1 + p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
 .games-transhaping .trailer {
-  width: 90%;
+  width: 70%;
   margin-bottom: 3rem;
 }
 
@@ -927,11 +933,17 @@ p + p {
     -ms-grid-columns: 0 auto 0;
         grid-template-columns: 0 auto 0;
   }
+  .games-transhaping h1 {
+    font-size: 6rem;
+  }
   .games-transhaping .main-container__content > .btn {
     margin-bottom: 3rem;
   }
   .games-transhaping .section, .games-transhaping .section--small {
     padding: 1rem;
+  }
+  .games-transhaping .section h2, .games-transhaping .section--small h2 {
+    text-align: center;
   }
   .games-transhaping .section__content, .games-transhaping .section:nth-of-type(even) .section__content {
     -ms-grid-columns: 100%;

@@ -17,17 +17,24 @@
     }
     
     h1 {
-        margin: 3rem 0 1rem 0;
+        margin: 3rem 0 0 0;
         font-family: $transhaping-font;
         font-weight: normal;
-        font-size: 8rem;
+        font-size: 20vh;
         text-transform: uppercase;
         text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+
+        + p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
     }
 
     .trailer {
         //cursor: pointer;
-        width: 90%;
+        width: 70%;
         margin-bottom: 3rem;
         //box-shadow: 0 8px 20px 1px rgba(0,0,0,0.3);
     }
@@ -80,6 +87,10 @@
 @include mobile-content {
     .games-transhaping {
         grid-template-columns: 0 auto 0;
+        
+        h1 {
+            font-size: 6rem;
+        }
 
         .main-container__content > .btn {
             margin-bottom: 3rem;
@@ -87,6 +98,10 @@
 
         .section, .section--small {
             padding: 1rem;
+
+            h2 {
+                text-align: center;
+            }
         }
 
         .section__content, .section:nth-of-type(even) .section__content{

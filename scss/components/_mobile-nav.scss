@@ -20,10 +20,10 @@
             grid-column: 1 / 4;
             overflow-y: hidden;
             max-height: 0;
-            transition: all 0.2s ease-out;
+            transition: all 0.3s cubic-bezier(.28,.47,.67,1);
 
             &.active {
-                max-height: 40vh;  
+                max-height: 60vh;  
                 padding: 1rem 0;              
             }
 
