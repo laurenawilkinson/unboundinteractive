@@ -876,6 +876,7 @@ p + p {
 
 .games-transhaping .trailer {
   width: 70%;
+  height: 315px;
   margin-bottom: 3rem;
 }
 
@@ -936,6 +937,9 @@ p + p {
   }
   .games-transhaping h1 {
     font-size: 6rem;
+  }
+  .games-transhaping .trailer {
+    width: 100%;
   }
   .games-transhaping .main-container__content > .btn {
     margin-bottom: 3rem;
