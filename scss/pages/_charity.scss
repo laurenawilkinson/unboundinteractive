@@ -1,0 +1,58 @@
+.charity {
+    @include shapes-heading {
+        &::before, &::after {
+            width: 2rem;
+            height: 2rem;
+            background-image: url('/assets/star.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    h2 {
+        word-break: break-word;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        color: grey;
+        font-family: $body-font;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        
+        &--floating {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            color: #FF549E;
+            font-weight: bold;
+        }
+    }
+
+    .content-box {
+        &--timeline {
+            position: relative;
+        }
+    }
+}
+
+@include tiny-screens {
+    .charity {
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        .subtitle--floating {
+            position: static;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        @include shapes-heading {
+            &::before, &::after {
+                background: none;
+            }
+        }
+    }
+}

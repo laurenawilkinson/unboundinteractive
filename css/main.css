@@ -401,6 +401,14 @@ p + p {
   }
 }
 
+.header__nav li:nth-child(5)::before {
+  width: 17px;
+  height: 17px;
+  background-image: url("/assets/star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 @media only screen and (max-width: 1150px) {
   .header__logo {
     -ms-grid-column: 1;
@@ -1139,5 +1147,66 @@ p + p {
   }
   .contact__info-links-link {
     color: #4EFF58;
+  }
+}
+
+.charity h1 > .shapes-heading::before, .charity h1 > .shapes-heading::after {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/assets/star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.charity h1 > .shapes-heading::before {
+  left: -3.5rem;
+}
+
+.charity h1 > .shapes-heading::after {
+  right: -3.5rem;
+}
+
+.charity h2 {
+  word-break: break-word;
+}
+
+.charity .subtitle {
+  font-size: 1rem;
+  color: grey;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.charity .subtitle--floating {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  color: #FF549E;
+  font-weight: bold;
+}
+
+.charity .content-box--timeline {
+  position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .charity h2 {
+    font-size: 1.2rem;
+  }
+  .charity .subtitle--floating {
+    position: static;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .charity h1 > .shapes-heading::before, .charity h1 > .shapes-heading::after {
+    background: none;
+  }
+  .charity h1 > .shapes-heading::before {
+    left: -3.5rem;
+  }
+  .charity h1 > .shapes-heading::after {
+    right: -3.5rem;
   }
 }
