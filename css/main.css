@@ -137,11 +137,7 @@ p + p {
   -webkit-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
   text-align: center;
-}
-
-.btn:hover, .btn:focus {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
 }
 
 .btn-main {
@@ -190,6 +186,15 @@ p + p {
   100% {
     background-position: left center;
   }
+}
+
+.btn-secondary {
+  border: 2px solid #4EFF58;
+  color: #018007;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background: #e7ffe8;
 }
 
 .btn-ghost {
@@ -473,6 +478,7 @@ p + p {
   width: 100%;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .games-card__image {
@@ -768,15 +774,11 @@ p + p {
 .main-container.transhaping-promo .btn-group .btn {
   font-size: 1.2rem;
   text-transform: uppercase;
+  padding: 1rem 2rem;
 }
 
 .main-container.transhaping-promo .btn-group .btn-main {
   color: #120C40;
-  padding: 1rem 2rem;
-}
-
-.main-container.transhaping-promo .btn-group .btn-ghost {
-  padding: 0.84rem 1.9rem;
 }
 
 @media only screen and (max-width: 855px) {
@@ -883,7 +885,8 @@ p + p {
 }
 
 .games-transhaping .trailer {
-  width: 70%;
+  max-width: 560px;
+  width: 100%;
   height: 315px;
   margin-bottom: 15vh;
 }
@@ -891,7 +894,6 @@ p + p {
 .games-transhaping .section {
   width: 100%;
   padding: 3rem 0;
-  min-height: 60vh;
   font-size: 1.1rem;
 }
 

@@ -3,6 +3,7 @@
     display: flex;
     width: 100%;
     @include box-shadow;
+    margin-bottom: 2rem;
 
     &__image {
         flex-basis: 45%;
